@@ -135,7 +135,6 @@ function requireNative() {
     }
   } else if (process.platform === 'darwin') {
     try {
-
       return require('./to_mp4.darwin-universal.node')
     } catch (e) {
       loadErrors.push(e)

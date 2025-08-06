@@ -30,3 +30,4 @@ const handler = new MessageHandler({
 globalThis.onmessage = function (e) {
   handler.handle(e)
 }
+
