@@ -20,6 +20,7 @@ pub fn yuv_to_h264(buf: Buffer, width: u32, height: u32) -> Buffer {
     panic!("Frame size {width}x{height} is too small. OpenH264 requires minimum 16x16 frame size for proper H.264 encoding");
   }
 
+
   // Use default encoder configuration
   let mut encoder = Encoder::new().unwrap();
 
