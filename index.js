@@ -73,7 +73,7 @@ function requireNative() {
   } else if (process.platform === 'android') {
     if (process.arch === 'arm64') {
       try {
-        return require('./package-template.android-arm64.node')
+        return require('./to_mp4.android-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -84,7 +84,7 @@ function requireNative() {
       }
     } else if (process.arch === 'arm') {
       try {
-        return require('./package-template.android-arm-eabi.node')
+        return require('./to_mp4.android-arm-eabi.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -99,7 +99,7 @@ function requireNative() {
   } else if (process.platform === 'win32') {
     if (process.arch === 'x64') {
       try {
-        return require('./package-template.win32-x64-msvc.node')
+        return require('./to_mp4.win32-x64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -110,7 +110,7 @@ function requireNative() {
       }
     } else if (process.arch === 'ia32') {
       try {
-        return require('./package-template.win32-ia32-msvc.node')
+        return require('./to_mp4.win32-ia32-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -121,7 +121,7 @@ function requireNative() {
       }
     } else if (process.arch === 'arm64') {
       try {
-        return require('./package-template.win32-arm64-msvc.node')
+        return require('./to_mp4.win32-arm64-msvc.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -135,7 +135,7 @@ function requireNative() {
     }
   } else if (process.platform === 'darwin') {
     try {
-      return require('./package-template.darwin-universal.node')
+      return require('./to_mp4.darwin-universal.node')
     } catch (e) {
       loadErrors.push(e)
     }
@@ -146,7 +146,7 @@ function requireNative() {
     }
     if (process.arch === 'x64') {
       try {
-        return require('./package-template.darwin-x64.node')
+        return require('./to_mp4.darwin-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -157,7 +157,7 @@ function requireNative() {
       }
     } else if (process.arch === 'arm64') {
       try {
-        return require('./package-template.darwin-arm64.node')
+        return require('./to_mp4.darwin-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -172,7 +172,7 @@ function requireNative() {
   } else if (process.platform === 'freebsd') {
     if (process.arch === 'x64') {
       try {
-        return require('./package-template.freebsd-x64.node')
+        return require('./to_mp4.freebsd-x64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -183,7 +183,7 @@ function requireNative() {
       }
     } else if (process.arch === 'arm64') {
       try {
-        return require('./package-template.freebsd-arm64.node')
+        return require('./to_mp4.freebsd-arm64.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -199,7 +199,7 @@ function requireNative() {
     if (process.arch === 'x64') {
       if (isMusl()) {
         try {
-          return require('./package-template.linux-x64-musl.node')
+          return require('./to_mp4.linux-x64-musl.node')
         } catch (e) {
           loadErrors.push(e)
         }
@@ -210,7 +210,7 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./package-template.linux-x64-gnu.node')
+          return require('./to_mp4.linux-x64-gnu.node')
         } catch (e) {
           loadErrors.push(e)
         }
@@ -223,7 +223,7 @@ function requireNative() {
     } else if (process.arch === 'arm64') {
       if (isMusl()) {
         try {
-          return require('./package-template.linux-arm64-musl.node')
+          return require('./to_mp4.linux-arm64-musl.node')
         } catch (e) {
           loadErrors.push(e)
         }
@@ -234,7 +234,7 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./package-template.linux-arm64-gnu.node')
+          return require('./to_mp4.linux-arm64-gnu.node')
         } catch (e) {
           loadErrors.push(e)
         }
@@ -247,7 +247,7 @@ function requireNative() {
     } else if (process.arch === 'arm') {
       if (isMusl()) {
         try {
-          return require('./package-template.linux-arm-musleabihf.node')
+          return require('./to_mp4.linux-arm-musleabihf.node')
         } catch (e) {
           loadErrors.push(e)
         }
@@ -258,7 +258,7 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./package-template.linux-arm-gnueabihf.node')
+          return require('./to_mp4.linux-arm-gnueabihf.node')
         } catch (e) {
           loadErrors.push(e)
         }
@@ -271,7 +271,7 @@ function requireNative() {
     } else if (process.arch === 'riscv64') {
       if (isMusl()) {
         try {
-          return require('./package-template.linux-riscv64-musl.node')
+          return require('./to_mp4.linux-riscv64-musl.node')
         } catch (e) {
           loadErrors.push(e)
         }
@@ -282,7 +282,7 @@ function requireNative() {
         }
       } else {
         try {
-          return require('./package-template.linux-riscv64-gnu.node')
+          return require('./to_mp4.linux-riscv64-gnu.node')
         } catch (e) {
           loadErrors.push(e)
         }
@@ -294,7 +294,7 @@ function requireNative() {
       }
     } else if (process.arch === 'ppc64') {
       try {
-        return require('./package-template.linux-ppc64-gnu.node')
+        return require('./to_mp4.linux-ppc64-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -305,7 +305,7 @@ function requireNative() {
       }
     } else if (process.arch === 's390x') {
       try {
-        return require('./package-template.linux-s390x-gnu.node')
+        return require('./to_mp4.linux-s390x-gnu.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -320,7 +320,7 @@ function requireNative() {
   } else if (process.platform === 'openharmony') {
     if (process.arch === 'arm64') {
       try {
-        return require('./package-template.linux-arm64-ohos.node')
+        return require('./to_mp4.linux-arm64-ohos.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -331,7 +331,7 @@ function requireNative() {
       }
     } else if (process.arch === 'x64') {
       try {
-        return require('./package-template.linux-x64-ohos.node')
+        return require('./to_mp4.linux-x64-ohos.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -342,7 +342,7 @@ function requireNative() {
       }
     } else if (process.arch === 'arm') {
       try {
-        return require('./package-template.linux-arm-ohos.node')
+        return require('./to_mp4.linux-arm-ohos.node')
       } catch (e) {
         loadErrors.push(e)
       }
@@ -363,7 +363,7 @@ nativeBinding = requireNative()
 
 if (!nativeBinding || process.env.NAPI_RS_FORCE_WASI) {
   try {
-    nativeBinding = require('./package-template.wasi.cjs')
+    nativeBinding = require('./to_mp4.wasi.cjs')
   } catch (err) {
     if (process.env.NAPI_RS_FORCE_WASI) {
       loadErrors.push(err)
@@ -394,3 +394,4 @@ if (!nativeBinding) {
 
 module.exports = nativeBinding
 module.exports.plus100 = nativeBinding.plus100
+module.exports.yuvToH264 = nativeBinding.yuvToH264
