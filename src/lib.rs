@@ -1,10 +1,9 @@
 #![deny(clippy::all)]
 
-use napi_derive::napi;
 use napi::bindgen_prelude::*;
+use napi_derive::napi;
 use openh264::encoder::Encoder;
 use openh264::formats::YUVBuffer;
-
 
 #[napi]
 pub fn plus_100(input: u32) -> u32 {
