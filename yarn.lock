@@ -33,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hopefulobject/tomp4@workspace:.":
+"@hopeful_object/tomp4@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@hopefulobject/tomp4@workspace:."
+  resolution: "@hopeful_object/tomp4@workspace:."
   dependencies:
     "@emnapi/core": "npm:^1.4.5"
     "@emnapi/runtime": "npm:^1.4.5"

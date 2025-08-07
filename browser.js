@@ -1,3 +1,3 @@
-export * from '@hopefulobject/tomp4-wasm32-wasi'
+export * from '@hopeful_object/tomp4-wasm32-wasi'
 
 

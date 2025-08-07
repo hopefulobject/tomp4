@@ -39,9 +39,9 @@ if (__nodeFs.existsSync(__wasmDebugFilePath)) {
   __wasmFilePath = __wasmDebugFilePath
 } else if (!__nodeFs.existsSync(__wasmFilePath)) {
   try {
-    __wasmFilePath = __nodePath.resolve('@hopefulobject/tomp4-wasm32-wasi')
+    __wasmFilePath = __nodePath.resolve('@hopeful_object/tomp4-wasm32-wasi')
   } catch {
-    throw new Error('Cannot find to_mp4.wasm32-wasi.wasm file, and @hopefulobject/tomp4-wasm32-wasi package is not installed.')
+    throw new Error('Cannot find to_mp4.wasm32-wasi.wasm file, and @hopeful_object/tomp4-wasm32-wasi package is not installed.')
   }
 }
 
